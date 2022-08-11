@@ -28,6 +28,15 @@ function Home() {
         <li class="list-group-item list-group-item-dark">
           This is a dark list group item
         </li>
+        <li class="list-group-item list-group-item-success">
+          <Link to="/multiplication-table">Multiplication table</Link>
+        </li>
+        <li class="list-group-item list-group-item-success">
+          <Link to="/sum-of-natural">Sum of Natural Number</Link>
+        </li>
+        <li class="list-group-item list-group-item-success">
+          <Link to="/sum-of-all">Sum of All Number String</Link>
+        </li>
       </ol>
     </div>
   );

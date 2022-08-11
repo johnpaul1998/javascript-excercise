@@ -1,23 +1,17 @@
 import React from "react";
 import { useState } from "react";
 
-function MultiplicationTable() {
+function SumOfAll() {
   const [input, setInput] = useState("");
-  const result =[];
-
-  const getMultiplicationTable = () =>{
-    // check if letter or null
-    if(isNaN(input) || !input){
-      return "Please enter a number";
-    }
-
-    //Creating multiplication table
-    for(let i=1;i<=10;i++){
-      result.push(input * i);
-    }
-      return result.map((data) => data);
-  };
-
+   let total = 0;
+   const getSumOfAll = () =>{
+    input.split("").map((data) => {
+        if(!isNaN(data)){
+            total = total + parseInt(data);
+        }
+    });
+    return total;
+   };
   return (
     <div className="container p-5">
       <div className="row">
@@ -38,7 +32,7 @@ function MultiplicationTable() {
             rows="10"
             readOnly={true}
             placeholder="Output"
-            value={getMultiplicationTable()}
+            value={getSumOfAll()}
           />
         </div>
       </div>
@@ -46,4 +40,4 @@ function MultiplicationTable() {
   );
 }
 
-export default MultiplicationTable;
+export default SumOfAll;

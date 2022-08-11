@@ -1,27 +1,24 @@
 import React from "react";
 import { useState } from "react";
 
-function MultiplicationTable() {
+function SumOfNatural() {
   const [input, setInput] = useState("");
-  const result =[];
 
-  const getMultiplicationTable = () =>{
-    // check if letter or null
-    if(isNaN(input) || !input){
-      return "Please enter a number";
+const getSumOfNat = () => {
+        if(isNaN(input) || !input){
+            return "Please enter a number";
+          }
+        let sum = 0;
+        for(let i = 1;i <= input; i++){
+        sum = sum + i;
+      }
+      return sum;
     }
-
-    //Creating multiplication table
-    for(let i=1;i<=10;i++){
-      result.push(input * i);
-    }
-      return result.map((data) => data);
-  };
-
   return (
     <div className="container p-5">
       <div className="row">
         <div className="col-md-5">
+            <h1 className="bg-light">Sum Of Natural Numbers</h1>
           <input
             type="text"
             className="w-100 lead"
@@ -38,7 +35,7 @@ function MultiplicationTable() {
             rows="10"
             readOnly={true}
             placeholder="Output"
-            value={getMultiplicationTable()}
+            value={getSumOfNat()}
           />
         </div>
       </div>
@@ -46,4 +43,4 @@ function MultiplicationTable() {
   );
 }
 
-export default MultiplicationTable;
+export default SumOfNatural;
