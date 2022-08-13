@@ -16,18 +16,6 @@ function Home() {
         <li class="list-group-item list-group-item-success">
           <Link to="/prime-numbers">Prime Numbers</Link>
         </li>
-        <li class="list-group-item list-group-item-info">
-          This is a warning list group item
-        </li>
-        <li class="list-group-item list-group-item-secondary">
-          This is a info list group item
-        </li>
-        <li class="list-group-item list-group-item-light">
-          This is a light list group item
-        </li>
-        <li class="list-group-item list-group-item-dark">
-          This is a dark list group item
-        </li>
         <li class="list-group-item list-group-item-success">
           <Link to="/multiplication-table">Multiplication table</Link>
         </li>
@@ -35,8 +23,29 @@ function Home() {
           <Link to="/sum-of-natural">Sum of Natural Number</Link>
         </li>
         <li class="list-group-item list-group-item-success">
-          <Link to="/sum-of-all">Sum of All Number String</Link>
+          <Link to="/get-largest-number">Get the Largest Number</Link>
         </li>
+        <li class="list-group-item list-group-item-success">
+          <Link to="/check-within">Check Within 100 to 500</Link>
+        </li> 
+        <li class="list-group-item list-group-item-success">
+          <Link to="/number-right-triangle">Number Right Triangle</Link>
+        </li>
+        <li class="list-group-item list-group-item-success">
+          <Link to="/number-triangle">Number Triangle</Link>
+        </li> 
+        <li class="list-group-item list-group-item-success">
+          <Link to="/right-triangle">Right Triangle</Link>
+        </li> 
+        <li class="list-group-item list-group-item-success">
+          <Link to="/triangle">Triangle</Link>
+        </li>  
+        <li class="list-group-item list-group-item-success">
+          <Link to="/total-digits">Total Digits</Link>
+        </li> 
+        <li class="list-group-item list-group-item-success">
+          <Link to="/vowels">Vowels</Link>
+        </li>      
       </ol>
     </div>
   );
