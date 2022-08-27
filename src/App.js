@@ -15,6 +15,7 @@ import RightTriangle from './pages/RightTriangle';
 import TotalOfDigits from './pages/TotalOfDigits';
 import Triangle from './pages/Triangle';
 import Vowels from './pages/Vowels';
+import RandomName from './pages/RandomName';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path='/triangle' element={<Triangle />} />
         <Route path='/total-digits' element={<TotalOfDigits />} />
         <Route path='/vowels' element={<Vowels />} />
+        <Route path='/random-name' element={<RandomName />} />
       </Routes>
    </BrowserRouter>
   );

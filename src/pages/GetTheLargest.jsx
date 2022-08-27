@@ -1,61 +1,41 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-export default function GetTheLargest() {
-  const [firstInput, setFirstInput] = useState("");
-  const [secondInput, setSecondInput] = useState("");
-  const [thirdInput, setThirdInput] = useState("");
+function GetTheLargest() {
+  const [first, setFirst] = useState(null);
+  const [second, setSecond] = useState(null);
+  const [third, setThird] = useState(null);
 
-  const getTheLargestNumber = () => {
-    // if (
-    //   parseFloat(firstInput) > parseFloat(secondInput) &&
-    //   parseFloat(firstInput) > parseFloat(thirdInput)
-    // ) {
-    //   return firstInput;
-    // } else if (
-    //   parseFloat(secondInput) > parseFloat(firstInput) &&
-    //   parseFloat(secondInput) > parseFloat(thirdInput)
-    // ) {
-    //   return secondInput;
-    // } else {
-    //   return thirdInput;
-    // }
-    return Math.max(firstInput, secondInput, thirdInput);
-  };
-
+  const highestNumber = () =>{
+    return Math.max(first,second,third);
+  }
   return (
-    <div className="container p-5">
-      <div className="row">
-        <div className="col-12 w-50 pb-5">
-          <input
-            type="text"
-            className="lead"
-            placeholder="Input"
-            value={firstInput}
-            onChange={(event) => {
-              setFirstInput(event.target.value);
-            }}
-          />
-          <input
-            type="text"
-            className="lead"
-            placeholder="Input"
-            value={secondInput}
-            onChange={(event) => {
-              setSecondInput(event.target.value);
-            }}
-          />
-          <input
-            type="text"
-            className="lead"
-            placeholder="Input"
-            value={thirdInput}
-            onChange={(event) => {
-              setThirdInput(event.target.value);
-            }}
+    <div className='container-sm'>
+      <div className='row py-5'>
+        <div className='col-sm'>
+          <input 
+            value={first}
+            onChange={(e)=>{setFirst(e.target.value)}}
+            placeholder='input first number'
           />
         </div>
-        <h1 className="col-12 w-100 text-primary">{getTheLargestNumber()}</h1>
+        <div className='col-sm'>
+          <input 
+            value={second}
+            onChange={(e)=>{setSecond(e.target.value)}}
+            placeholder='input second number'
+          />
+        </div>
+        <div className='col-sm'>
+          <input 
+            value={third}
+            onChange={(e)=>{setThird(e.target.value)}}
+            placeholder='input third number'
+          />
+        </div>
       </div>
+      <h1 className='text-primary'>{highestNumber()}</h1>
     </div>
-  );
+  )
 }
+
+export default GetTheLargest

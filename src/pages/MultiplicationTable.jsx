@@ -1,49 +1,35 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from 'react'
 
 function MultiplicationTable() {
-  const [input, setInput] = useState("");
-  const result =[];
+    const [input, setInput] = useState(null);
 
-  const getMultiplicationTable = () =>{
-    // check if letter or null
-    if(isNaN(input) || !input){
-      return "Please enter a number";
+    const getMultiplication = () =>{
+        if(isNaN(input)){
+            return(<h1 className='text-warning'>Please input number</h1>)
+        }else{
+            let sequence = [];
+            for(let i = 0;i <= 10; i++){
+                sequence.push(input * i);
+            }
+            return sequence.map((data)=><h1>{data}</h1>)
+        }
     }
-
-    //Creating multiplication table
-    for(let i=1;i<=10;i++){
-      result.push(input * i);
-    }
-      return result.map((data) => data);
-  };
-
   return (
-    <div className="container p-5">
-      <div className="row">
-        <div className="col-md-5">
-          <input
-            type="text"
-            className="w-100 lead"
-            placeholder="Input"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
+    <div className='container'>
+        <div className='row py-4'>
+            <div className='col-sm'>
+                <input
+                    type="text" 
+                    value={input}
+                    onChange={(e)=>{
+                        setInput(e.target.value)
+                    }}
+                />
+            </div>
         </div>
-        <div className="col-md-5">
-          <textarea
-            name="text"
-            id="text"
-            cols="30"
-            rows="10"
-            readOnly={true}
-            placeholder="Output"
-            value={getMultiplicationTable()}
-          />
-        </div>
-      </div>
+        <h1 className='text-primary'>{getMultiplication()}</h1>
     </div>
-  );
+  )
 }
 
-export default MultiplicationTable;
+export default MultiplicationTable
